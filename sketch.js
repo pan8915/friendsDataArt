@@ -35,6 +35,9 @@ function setup() {
    img[1]=loadImage('img/Ross_mouth.png');
    img[2]=loadImage('img/rachel_mouth.png');
    img[3]=loadImage('img/joey_mouth.png');
+   img[4]=loadImage('img/joey_mouth.png');
+   img[5]=loadImage('img/joey_mouth.png');
+   img[6]=loadImage('img/joey_mouth.png');
 
   }
 
