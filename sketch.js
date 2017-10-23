@@ -1,6 +1,8 @@
 
 var nums =[];
 var currentName = ["X","O","R","J","P","M","C"];
+// var currentName = ["&#98122654","&#98122654","&#98122654","&#98122654","&#98122654","&#98122654","&#98122654"];
+
 // X-0
 // Ross-1
 // rachel-2
@@ -17,10 +19,10 @@ function playNext(trackNum){
   if(currentTrack < playingOrder.length){
   nums[playingOrder[trackNum]].play().onended(function(){
     currentTrack++;
-    if (currentTrack%60  == 0){
+    if (currentTrack%40  == 0){
       nameText = nameText + '\n' + currentName[playingOrder[currentTrack]];
     } else {
-      nameText = nameText+ currentName[playingOrder[currentTrack]];
+      nameText = nameText+ ' ' + currentName[playingOrder[currentTrack]];
     }
 
     draw();
@@ -75,9 +77,9 @@ function mousePressed(){
 
 function draw() {
    image(img[playingOrder[currentTrack]],0,0);
-   var s = random(255);
-   textSize(32);
-   fill(0, 102, 153, 51);
+   textFont("Courier");
+   textSize(22);
+   fill(0, 102, 153, 31);
    text(nameText, 10, 25);
    //text(currentName[playingOrder[currentTrack]], currentTrack*10, 15);
   //  console.log('currentTrack');
