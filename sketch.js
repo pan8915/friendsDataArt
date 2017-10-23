@@ -60,14 +60,14 @@ function preload() {
 // Monica-5
 // Chandler-6
 function setup() {
-   createCanvas(1054,800);
-   img[0]=loadImage('pics/friends.png');
-   img[1]=loadImage('pics/ross.png');
-   img[2]=loadImage('pics/rachel.png');
-   img[3]=loadImage('pics/joey.png');
-   img[4]=loadImage('pics/Phoebe.png');
-   img[5]=loadImage('pics/Monica.png');
-   img[6]=loadImage('pics/Chandler.png');
+   createCanvas(700,394);
+   img[0]=loadImage('img/new_background.jpg');
+   img[1]=loadImage('img/Ross.jpg');
+   img[2]=loadImage('img/rachel.jpg');
+   img[3]=loadImage('img/Joey.jpg');
+   img[4]=loadImage('img/phebe_mouth.jpg');
+   img[5]=loadImage('img/Monica.jpg');
+   img[6]=loadImage('img/chandler.jpg');
   }
 
 function mousePressed(){
@@ -76,9 +76,10 @@ function mousePressed(){
 }
 
 function draw() {
+
    image(img[playingOrder[currentTrack]],0,0);
    textFont("Courier");
-   textSize(22);
+   textSize(15);
    fill(0, 102, 153, 31);
    text(nameText, 10, 25);
    //text(currentName[playingOrder[currentTrack]], currentTrack*10, 15);
