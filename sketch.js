@@ -1,9 +1,6 @@
 
 var nums =[];
 var currentName = ["X","O","R","J","P","M","C"];
-
-var x =10;
-var y =15;
 // X-0
 // Ross-1
 // rachel-2
@@ -23,7 +20,7 @@ function playNext(trackNum){
     if (currentTrack%60  == 0){
       nameText = nameText + '\n' + currentName[playingOrder[currentTrack]];
     } else {
-      nameText = nameText + currentName[playingOrder[currentTrack]];
+      nameText = nameText+ currentName[playingOrder[currentTrack]];
     }
 
     draw();
@@ -78,9 +75,10 @@ function mousePressed(){
 
 function draw() {
    image(img[playingOrder[currentTrack]],0,0);
-   textSize(15);
+   var s = random(255);
+   textSize(32);
    fill(0, 102, 153, 51);
-   text(nameText, x, y);
+   text(nameText, 10, 25);
    //text(currentName[playingOrder[currentTrack]], currentTrack*10, 15);
   //  console.log('currentTrack');
 }
